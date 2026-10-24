@@ -1,0 +1,23 @@
+# Java / Maven
+target/
+*.class
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.next/
+
+# Secrets and local config - never commit these
+.env
+.env.*
+application-local.properties
+
+# OS
+.DS_Store
+Thumbs.db
