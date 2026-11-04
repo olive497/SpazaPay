@@ -1,0 +1,10 @@
+{
+  "description": "Enables South African spaza shop owners to accept digital payments via QR codes and track sales with a simple, multilingual mobile-first dashboard.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
