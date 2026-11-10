@@ -1,6 +1,12 @@
-const SYMBOLS: Record<string, string> = { EUR: "€", ZAR: "R", USD: "$" };
+import { ZAR_PER_EUR } from "./config"
 
-export function formatMoney(amount: number, currency = "EUR") {
-  const symbol = SYMBOLS[currency] ?? currency + " ";
-  return `${symbol}${amount.toFixed(2)}`;
+export const round2 = (n: number) => Math.round((n + Number.EPSILON) * 100) / 100
+
+export const zarToEur = (zar: number) => round2(zar / ZAR_PER_EUR)
+
+export const eurToZar = (eur: number) => round2(eur * ZAR_PER_EUR)
+
+export const formatZar = (amount: number | string) => {
+  const value = typeof amount === "string" ? Number.parseFloat(amount) : amount
+  return `R${Number.isFinite(value) ? value.toFixed(2) : "0.00"}`
 }
